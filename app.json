@@ -1,0 +1,32 @@
+{
+  "id": "52310b42-ee75-4fbb-a75a-db4293c88dcb",
+  "name": "Reports",
+  "publisher": "Keith How",
+  "version": "1.0.0.0",
+  "brief": "Reports",
+  "description": "Reports",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "./logo/KNH.jpg",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "24.0.0.0",
+  "idRanges": [
+    {
+      "from": 53800,
+      "to": 53849
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "13.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
