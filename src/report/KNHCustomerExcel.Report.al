@@ -1,10 +1,10 @@
 /// <summary>
-/// Report Excel Test (ID 50302).
+/// Report Excel (ID 50302).
 /// </summary>
 report 53800 "KNHCustomerExcel"
 {
     ApplicationArea = Basic, Suite;
-    Caption = 'Excel Test Report';
+    Caption = 'Customer Excel';
     UsageCategory = ReportsAndAnalysis;
     ExcelLayout = './src/report/xlsx/KNHCustomerExcel.xlsx';
     DefaultLayout = Excel;
@@ -13,50 +13,73 @@ report 53800 "KNHCustomerExcel"
     {
         dataitem(Customer; Customer)
         {
-            column(No_Cust; "No.")
+            column(No_; "No.")
             {
+                IncludeCaption = true;
             }
-            column(Name_Cust; Name)
+            column(Cust_Name; Name)
             {
+                IncludeCaption = true;
             }
-            column(Address_Cust; Address)
+            column(Cust_Address; Address)
             {
+                IncludeCaption = true;
             }
-            column(City_Cust; City)
+            column(Cust_City; City)
             {
+                IncludeCaption = true;
             }
-            column(PostCode_Cust; "Post Code")
+            column(Cust_PostCode; "Post Code")
             {
+                IncludeCaption = true;
             }
-            column(PhoneNo_Cust; "Phone No.")
+            column(Cust_PhoneNo; "Phone No.")
             {
+                IncludeCaption = true;
             }
-            column(Salesperson_Code_Cust; "Salesperson Code")
+            column(Cust_SalespersonCode; "Salesperson Code")
             {
+                IncludeCaption = true;
             }
-            column(Balance_Cust; Balance)
+            column(Cust_Balance; Balance)
             {
+                IncludeCaption = true;
             }
-            column(SalesLCY_Cust; "Sales (LCY)")
+            column(Cust_CurrencyCode; "Currency Code")
             {
+                IncludeCaption = true;
             }
+            column(Cust_LanguageCode; "Language Code")
+            {
+                IncludeCaption = true;
+            }
+
             dataitem("Cust. Ledger Entry"; "Cust. Ledger Entry")
             {
                 DataItemLink = "Customer No." = field("No.");
-                column(Customer_No_CL; "Customer No.")
+                column(CLE_PostingDate; "Posting Date")
                 {
+                    IncludeCaption = true;
                 }
-                column(Customer_Name_CL; "Customer Name")
+                column(CLE_DocumentDate; "Document Date")
                 {
+                    IncludeCaption = true;
                 }
-                column(Posting_Date_CL; "Posting Date")
+                column(CLE_DocumentType; "Document Type")
                 {
+                    IncludeCaption = true;
                 }
-                column(Document_Date_CL; "Document Date")
+                column(Amount; Amount)
                 {
+                    IncludeCaption = true;
                 }
-                column(Document_Type_CL; "Document Type")
+                column(Global_Dimension_1_Code; "Global Dimension 1 Code")
                 {
+                    IncludeCaption = true;
+                }
+                column(Global_Dimension_2_Code; "Global Dimension 2 Code")
+                {
+                    IncludeCaption = true;
                 }
             }
         }

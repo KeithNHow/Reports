@@ -2,90 +2,100 @@ report 53803 KNHVendorExcel
 {
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
-    DefaultRenderingLayout = Excel;
+    DefaultRenderingLayout = VendorExcelLayout;
     ExcelLayoutMultipleDataSheets = true;
     MaximumDatasetSize = 1000000;
+    Caption = 'Vendor Excel';
 
     dataset
     {
-        dataitem(DataItemName; Vendor)
+        dataitem(Vendor; Vendor)
         {
             DataItemTableView = sorting("No.");
             RequestFilterFields = "No.", Name;
-
-            column(No_; "No.")
+            column(Vend_No; "No.")
             {
                 IncludeCaption = true;
             }
-            dataitem(VendLedgEntry; "Vendor Ledger Entry")
+            column(Vend_Name; Name)
             {
-                DataItemLink = "Vendor No." = field("No.");
-                DataItemTableView = sorting("Entry No.") order(descending);
-                RequestFilterFields = "Vendor No.", "Document Type", "Date Filter";
-
-                column(Document_No_; "Document No.")
-                {
-                    IncludeCaption = true;
-                }
-                column(Document_Type; "Document Type")
-                {
-                    IncludeCaption = true;
-                }
-                column(Amount; Amount)
-                {
-                    IncludeCaption = true;
-                }
-                column(Posting_Date; "Posting Date")
-                {
-                    IncludeCaption = true;
-                }
-                column(Document_Date; "Document Date")
-                {
-                    IncludeCaption = true;
-                }
+                IncludeCaption = true;
             }
-            dataitem(Dimension1; "Dimension Value")
+        }
+        dataitem(VendLedgEntry; "Vendor Ledger Entry")
+        {
+            DataItemTableView = sorting("Entry No.") order(descending);
+            RequestFilterFields = "Vendor No.", "Document Type", "Date Filter";
+            column(VLE_DocNo_; "Document No.")
             {
-                DataItemLink = Code = field("Global Dimension 1 Code");
-
-                column(Dimension_Code; "Dimension Code")
-                {
-                    IncludeCaption = true;
-                }
-                column("Code"; Code)
-                {
-                    IncludeCaption = true;
-                }
-                column(Name; Name)
-                {
-                    IncludeCaption = true;
-                }
+                IncludeCaption = true;
             }
-            dataitem(Dimension2; "Dimension Value")
+            column(VLE_DocType; "Document Type")
             {
-                DataItemLink = Code = field("Global Dimension 2 Code");
-
-                column(DimensionCode; "Dimension Code")
-                {
-                    IncludeCaption = true;
-                }
-                column(CodeValue; Code)
-                {
-                    IncludeCaption = true;
-                }
-                column(CodeName; Name)
-                {
-                    IncludeCaption = true;
-                }
+                IncludeCaption = true;
+            }
+            column(VLE_No; "Vendor No.")
+            {
+                IncludeCaption = true;
+            }
+            column(VLE_Desc; Description)
+            {
+                IncludeCaption = true;
+            }
+            column(VLE_Amount; Amount)
+            {
+                IncludeCaption = true;
+            }
+            column(VLE_PostDate; "Posting Date")
+            {
+                IncludeCaption = true;
+            }
+            column(VLE_DocDate; "Document Date")
+            {
+                IncludeCaption = true;
+            }
+            column(VLE_Dept; "Global Dimension 1 Code")
+            {
+                IncludeCaption = true;
+            }
+            column(VLE_CustGroup; "Global Dimension 2 Code")
+            {
+                IncludeCaption = true;
+            }
+        }
+        dataitem(Dimension; "Dimension")
+        {
+            column(Dim_Code; Code)
+            {
+                IncludeCaption = true;
+            }
+            column(Dim_Name; Name)
+            {
+                IncludeCaption = true;
+            }
+        }
+        dataitem(DimensionValue; "Dimension Value")
+        {
+            column(DV_DimCode; "Dimension Code")
+            {
+                IncludeCaption = true;
+            }
+            column(DV_Code; Code)
+            {
+                IncludeCaption = true;
+            }
+            column(DV_Name; Name)
+            {
+                IncludeCaption = true;
             }
         }
     }
 
     requestpage
     {
+        SaveValues = true;
         AboutTitle = 'Vendor Report';
         AboutText = 'Purpose of this report to export details about vendors for analysis.';
-        SaveValues = true;
 
         layout
         {
@@ -114,11 +124,11 @@ report 53803 KNHVendorExcel
 
     rendering
     {
-        layout(Excel)
+        layout(VendorExcelLayout)
         {
             Type = Excel;
             LayoutFile = './src/report/xlsx/KNHVendorExcel.xlsx';
-            Caption = 'Vendor';
+            Caption = 'Vendor Excel';
             Summary = 'Built in Layout for Vendors';
         }
     }
