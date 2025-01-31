@@ -6,9 +6,9 @@ report 53801 "KNHItemLedgerEntryAnalysis"
     ApplicationArea = All;
     Caption = 'Item Ledger Entry Analysis';
     UsageCategory = ReportsAndAnalysis;
-    DefaultLayout = RDLC;
-    RDLCLayout = './src/report/rdlc/KNHItemLedgerEntryAnalysis.rdlc';
+    DefaultRenderingLayout = "KNHItemLedgerEntryAnalysis.rdlc";
     UseRequestPage = true;
+    ProcessingOnly = true;
 
     dataset
     {
@@ -46,6 +46,7 @@ report 53801 "KNHItemLedgerEntryAnalysis"
             }
         }
     }
+
     requestpage
     {
         layout
@@ -69,6 +70,15 @@ report 53801 "KNHItemLedgerEntryAnalysis"
             area(processing)
             {
             }
+        }
+    }
+    rendering
+    {
+        layout("KNHItemLedgerEntryAnalysis.rdlc")
+        {
+            Type = RDLC;
+            LayoutFile = './src/report/rdlc/KNHItemLedgerEntryAnalysis.rdlc';
+            Caption = 'Item Ledger Entry Analysis';
         }
     }
     labels

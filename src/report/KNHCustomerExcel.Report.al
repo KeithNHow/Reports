@@ -6,8 +6,8 @@ report 53800 "KNHCustomerExcel"
     ApplicationArea = Basic, Suite;
     Caption = 'Customer Excel';
     UsageCategory = ReportsAndAnalysis;
-    ExcelLayout = './src/report/xlsx/KNHCustomerExcel.xlsx';
-    DefaultLayout = Excel;
+    DefaultRenderingLayout = "KNHCustomerExcel.xlsx";
+    ProcessingOnly = true;
 
     dataset
     {
@@ -82,6 +82,16 @@ report 53800 "KNHCustomerExcel"
                     IncludeCaption = true;
                 }
             }
+        }
+    }
+    rendering
+    {
+        layout("KNHCustomerExcel.xlsx")
+        {
+            Type = Excel;
+            LayoutFile = './src/report/xlsx/KNHCustomerExcel.xlsx';
+            Caption = 'Standard Customer Layout (Excel)';
+            Summary = 'The Standard Customer Layout (Excel) provides a detailed layout.';
         }
     }
 }
