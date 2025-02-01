@@ -1,6 +1,5 @@
-/// <summary>
-/// Report Item Ledger Entry Analysis (ID 50301)
-/// </summary>
+// This file contains the report definition.
+
 report 53801 "KNHItemLedgerEntryAnalysis"
 {
     ApplicationArea = All;

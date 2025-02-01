@@ -1,6 +1,5 @@
-/// <summary>
-/// ReportExt KNH Customer Sales List (ID 51600) extends Record Customer - Top 10 List.
-/// </summary>
+//This file contains the definition for the report extension.
+
 reportextension 53800 "KNHCustomerSalesList" extends "Customer - Top 10 List"
 {
     dataset

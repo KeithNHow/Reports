@@ -1,3 +1,5 @@
+// This file contains the code for the page extension.
+
 namespace KeithHow.Reports;
 
 using Microsoft.Sales.Customer;

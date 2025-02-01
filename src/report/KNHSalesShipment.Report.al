@@ -1,3 +1,5 @@
+//This file contains the report definition.
+
 namespace KNH.Reports;
 using Microsoft.Sales.History;
 

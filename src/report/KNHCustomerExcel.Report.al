@@ -1,6 +1,5 @@
-/// <summary>
-/// Report Excel (ID 50302).
-/// </summary>
+// This file contains the report definition.
+
 report 53800 "KNHCustomerExcel"
 {
     ApplicationArea = Basic, Suite;
@@ -54,7 +53,7 @@ report 53800 "KNHCustomerExcel"
                 IncludeCaption = true;
             }
 
-            dataitem("Cust. Ledger Entry"; "Cust. Ledger Entry")
+            dataitem(CustLedgerEntry; "Cust. Ledger Entry")
             {
                 DataItemLink = "Customer No." = field("No.");
                 column(CLE_PostingDate; "Posting Date")

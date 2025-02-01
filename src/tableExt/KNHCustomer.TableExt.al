@@ -1,6 +1,5 @@
-/// <summary>
-/// TableExtension KNH Customer (ID 53800) extends Record Customer.
-/// </summary>
+//This file contains the table extension.
+
 tableextension 53800 "KNHCustomer" extends Customer
 {
     fields

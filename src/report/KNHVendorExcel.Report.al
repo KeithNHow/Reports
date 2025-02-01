@@ -1,3 +1,5 @@
+//This file contains the report definition.
+
 report 53803 KNHVendorExcel
 {
     UsageCategory = ReportsAndAnalysis;

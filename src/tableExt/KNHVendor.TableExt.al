@@ -1,3 +1,5 @@
+//This file contains the table extension.
+
 namespace Reports.Reports;
 
 using Microsoft.Purchases.Vendor;
