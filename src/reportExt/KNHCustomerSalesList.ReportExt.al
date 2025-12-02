@@ -1,6 +1,6 @@
 //This file contains the definition for the report extension.
 
-reportextension 53800 "KNHCustomerSalesList" extends "Customer - Top 10 List"
+reportextension 54400 "KNHCustomerSalesList" extends "Customer - Top 10 List"
 {
     dataset
     {

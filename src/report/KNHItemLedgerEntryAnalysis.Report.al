@@ -1,6 +1,6 @@
 // This file contains the report definition.
 
-report 53801 "KNHItemLedgerEntryAnalysis"
+report 54401 "KNHItemLedgerEntryAnalysis"
 {
     ApplicationArea = All;
     Caption = 'Item Ledger Entry Analysis';

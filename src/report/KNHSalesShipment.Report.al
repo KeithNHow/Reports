@@ -23,7 +23,7 @@ using System.Email;
 using System.Globalization;
 using System.Utilities;
 
-report 53802 "KNHSalesShipment"
+report 54402 "KNHSalesShipment"
 {
     Caption = 'Sales - Shipment';
     PreviewMode = PrintLayout;

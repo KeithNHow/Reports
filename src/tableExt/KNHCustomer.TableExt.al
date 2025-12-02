@@ -1,6 +1,6 @@
 //This file contains the table extension.
 
-tableextension 53800 "KNHCustomer" extends Customer
+tableextension 54400 "KNHCustomer" extends Customer
 {
     fields
     {

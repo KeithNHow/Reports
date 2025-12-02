@@ -4,7 +4,7 @@ namespace Reports.Reports;
 
 using Microsoft.Purchases.Vendor;
 
-tableextension 53801 KNHVendor extends Vendor
+tableextension 54401 KNHVendor extends Vendor
 {
     fields
     {

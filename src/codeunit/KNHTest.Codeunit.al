@@ -2,7 +2,7 @@
 
 namespace KeithHow.Reports;
 
-codeunit 53801 KNHTest
+codeunit 54401 KNHTest
 {
 
 }

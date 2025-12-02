@@ -4,7 +4,7 @@ namespace KeithHow.Reports;
 
 using Microsoft.Sales.Customer;
 
-pageextension 53800 KNHCustomerListExt extends "Customer List"
+pageextension 54400 KNHCustomerListExt extends "Customer List"
 {
     trigger OnOpenPage();
     begin
