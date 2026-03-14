@@ -65,7 +65,7 @@ report 54403 KNHVendorExcel
                 IncludeCaption = true;
             }
         }
-        dataitem(Dimension; "Dimension")
+        dataitem(Dimension; Dimension)
         {
             column(Dim_Code; Code)
             {
@@ -112,7 +112,7 @@ report 54403 KNHVendorExcel
 
         actions
         {
-            area(processing)
+            area(Processing)
             {
                 action(LayoutName)
                 {

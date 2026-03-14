@@ -1,6 +1,6 @@
 //This file contains the definition for the report extension.
 
-reportextension 54400 "KNHCustomerSalesList" extends "Customer - Top 10 List"
+reportextension 54400 KNHCustomerSalesList extends "Customer - Top 10 List"
 {
     dataset
     {
@@ -46,6 +46,8 @@ reportextension 54400 "KNHCustomerSalesList" extends "Customer - Top 10 List"
                 // add field from table extension to request page
                 field(KNHCustomer_MyField; Customer."KNH MyField")
                 {
+                    ToolTip = 'Specifies the value of the KNH MyField field.';
+                    ApplicationArea = All;
 
                 }
             }
@@ -71,6 +73,6 @@ reportextension 54400 "KNHCustomerSalesList" extends "Customer - Top 10 List"
     end;
 
     var
-        netWeight: Integer;
         weightInPounds: Boolean;
+        netWeight: Integer;
 }

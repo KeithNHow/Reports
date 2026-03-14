@@ -1,6 +1,6 @@
 // This file contains the report definition.
 
-report 54400 "KNHCustomerExcel"
+report 54400 KNHCustomerExcel
 {
     ApplicationArea = Basic, Suite;
     Caption = 'Customer Excel';

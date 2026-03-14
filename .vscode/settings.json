@@ -22,7 +22,18 @@
     {
         "generateReportLayout": true
     },
-
+    "alOutline.codeCleanupActions": [
+        "AddToolTips",
+        "FixKeywordsCase",
+        "FixIdentifiersCase",
+        "SortVariables",
+        "AddApplicationAreas",
+        "SortTableFields",
+        "AddMissingParentheses",
+        "RemoveBeginEnd",
+        "RemoveUnusedVariables"
+    ],
+    "al.ruleSetPath": "./.vscode/ruleset.json",
     "workbench.editor.enablePreview": true,
 
     "CRS.ObjectNamePrefix": "KNH",

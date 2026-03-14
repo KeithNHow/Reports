@@ -1,6 +1,6 @@
 // This file contains the report definition.
 
-report 54401 "KNHItemLedgerEntryAnalysis"
+report 54401 KNHItemLedgerEntryAnalysis
 {
     ApplicationArea = All;
     Caption = 'Item Ledger Entry Analysis';
@@ -50,7 +50,7 @@ report 54401 "KNHItemLedgerEntryAnalysis"
     {
         layout
         {
-            area(content)
+            area(Content)
             {
                 group(Options)
                 {
@@ -66,7 +66,7 @@ report 54401 "KNHItemLedgerEntryAnalysis"
         }
         actions
         {
-            area(processing)
+            area(Processing)
             {
             }
         }
@@ -88,7 +88,7 @@ report 54401 "KNHItemLedgerEntryAnalysis"
 
     trigger OnPreReport()
     begin
-        if gvincludeLogo then begin
+        if gvIncludeLogo then begin
             CompanyInformation.Get();  //Get Company Information record           
             CompanyInformation.CalcFields(Picture);  //Retrieve company logo
         end;

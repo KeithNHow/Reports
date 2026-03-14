@@ -23,12 +23,13 @@ using System.Email;
 using System.Globalization;
 using System.Utilities;
 
-report 54402 "KNHSalesShipment"
+report 54402 KNHSalesShipment
 {
     Caption = 'Sales - Shipment';
     PreviewMode = PrintLayout;
     DefaultRenderingLayout = "KNHSalesShipment.rdlc";
     WordMergeDataItem = "Sales Shipment Header";
+    ApplicationArea = All;
 
     dataset
     {
@@ -411,7 +412,7 @@ report 54402 "KNHSalesShipment"
                                 this.ItemTrackingDocMgt.SetRetrieveAsmItemTracking(true);
                                 this.TrackingSpecCount :=
                                   this.ItemTrackingDocMgt.RetrieveDocumentItemTracking(
-                                      this.TempTrackingSpecBuffer, "Sales Shipment Header"."No.", DATABASE::"Sales Shipment Header", 0);
+                                      this.TempTrackingSpecBuffer, "Sales Shipment Header"."No.", Database::"Sales Shipment Header", 0);
                                 this.ItemTrackingDocMgt.SetRetrieveAsmItemTracking(false);
                             end;
                         end;
@@ -585,7 +586,7 @@ report 54402 "KNHSalesShipment"
                 trigger OnPostDataItem()
                 begin
                     if not this.IsReportInPreviewMode() then
-                        CODEUNIT.Run(CODEUNIT::"Sales Shpt.-Printed", "Sales Shipment Header");
+                        Codeunit.Run(Codeunit::"Sales Shpt.-Printed", "Sales Shipment Header");
                 end;
 
                 trigger OnPreDataItem()
@@ -625,7 +626,7 @@ report 54402 "KNHSalesShipment"
 
         layout
         {
-            area(content)
+            area(Content)
             {
                 group(Options)
                 {
@@ -717,7 +718,7 @@ report 54402 "KNHSalesShipment"
             if "Sales Shipment Header".FindSet() then
                 repeat
                     this.SegManagement.LogDocument(
-                      5, "Sales Shipment Header"."No.", 0, 0, DATABASE::Customer, "Sales Shipment Header"."Sell-to Customer No.",
+                      5, "Sales Shipment Header"."No.", 0, 0, Database::Customer, "Sales Shipment Header"."Sell-to Customer No.",
                       "Sales Shipment Header"."Salesperson Code", "Sales Shipment Header"."Campaign No.",
                       "Sales Shipment Header"."Posting Description", '');
                 until "Sales Shipment Header".Next() = 0;
@@ -807,11 +808,11 @@ report 54402 "KNHSalesShipment"
         PurchaseOrderNoLbl: Label 'Purchase Order No.';
 
     protected var
-        TempTrackingSpecBuffer: Record "Tracking Specification" temporary;
         CompanyInfo: Record "Company Information";
         CompanyInfo1: Record "Company Information";
         CompanyInfo2: Record "Company Information";
         CompanyInfo3: Record "Company Information";
+        TempTrackingSpecBuffer: Record "Tracking Specification" temporary;
 
     procedure InitLogInteraction()
     begin
