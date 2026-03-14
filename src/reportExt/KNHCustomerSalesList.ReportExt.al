@@ -1,4 +1,6 @@
-//This file contains the definition for the report extension.
+///<summary>
+/// The KNHCustomerSalesList report extension enhances the existing "Customer - Top 10 List" report by adding additional fields and functionality. It introduces new columns for the customer's GLN and a custom field called "KNH MyField". Additionally, it calculates the net weight of sales for each customer, with an option to display the weight in pounds. This extension allows users to gain deeper insights into their top customers by providing more detailed information and customizable options on the request page.
+///</summary>
 
 reportextension 54400 KNHCustomerSalesList extends "Customer - Top 10 List"
 {
@@ -6,11 +8,9 @@ reportextension 54400 KNHCustomerSalesList extends "Customer - Top 10 List"
     {
         add(Integer)
         {
-            // add existing field from base table to dataset
             column(KNHCustomer_GLN; Customer.GLN)
             {
             }
-            // add field from table extending Customer
             column(KNHCustomer_MyField; Customer."KNH MyField")
             {
             }
@@ -18,7 +18,6 @@ reportextension 54400 KNHCustomerSalesList extends "Customer - Top 10 List"
 
         add(Customer)
         {
-            // add a new field to the dataset
             column(KNHnetWeight; netWeight)
             {
             }
@@ -26,10 +25,9 @@ reportextension 54400 KNHCustomerSalesList extends "Customer - Top 10 List"
 
         modify(Customer)
         {
-            // modify the new, added field
             trigger OnBeforeAfterGetRecord()
             begin
-                if (weightInPounds) then
+                if weightInPounds then
                     netWeight := netWeight * 2.2
                 else
                     netWeight := netWeight;
@@ -43,36 +41,16 @@ reportextension 54400 KNHCustomerSalesList extends "Customer - Top 10 List"
         {
             addafter(Show)
             {
-                // add field from table extension to request page
                 field(KNHCustomer_MyField; Customer."KNH MyField")
                 {
                     ToolTip = 'Specifies the value of the KNH MyField field.';
                     ApplicationArea = All;
-
                 }
             }
         }
-
-        actions
-        {
-        }
     }
-
-    labels
-    {
-    }
-
-    trigger OnPreReport()
-    begin
-
-    end;
-
-    trigger OnPostReport()
-    begin
-
-    end;
 
     var
-        weightInPounds: Boolean;
-        netWeight: Integer;
+        netWeight: Decimal;
+        WeightInPounds: Boolean;
 }

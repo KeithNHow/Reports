@@ -1,4 +1,6 @@
-//This file contains the report definition.
+///<summary>
+/// The KNHSalesShipment report is designed to provide a detailed layout of sales shipment information. It includes various details about the sales shipment header, lines, dimensions, and item tracking. The report also allows for options such as showing internal information, correction lines, and assembly components. This report is ideal for users who need to analyze sales shipment data in detail or share it with stakeholders who require a comprehensive view of the shipment information.
+///</summary>
 
 namespace KNH.Reports;
 using Microsoft.Sales.History;

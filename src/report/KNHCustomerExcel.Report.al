@@ -1,4 +1,6 @@
-// This file contains the report definition.
+///<summary>
+/// The KNHCustomerExcel report is designed to provide a detailed layout of customer information in Excel format. It includes various customer details such as name, address, city, phone number, and financial information. The report also includes related customer ledger entries, allowing for a comprehensive view of customer transactions. This report is ideal for users who need to analyze customer data in Excel or share it with stakeholders who prefer Excel format.
+///</summary>
 
 report 54400 KNHCustomerExcel
 {
@@ -49,6 +51,10 @@ report 54400 KNHCustomerExcel
                 IncludeCaption = true;
             }
             column(Cust_LanguageCode; "Language Code")
+            {
+                IncludeCaption = true;
+            }
+            column(Cust_MyField; "KNH MyField")
             {
                 IncludeCaption = true;
             }

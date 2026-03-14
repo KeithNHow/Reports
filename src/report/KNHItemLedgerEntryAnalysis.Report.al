@@ -1,4 +1,6 @@
-// This file contains the report definition.
+///<summary>
+/// This report is designed to analyze item ledger entries, providing insights into inventory movements, posting dates, document numbers, and other relevant details. The report includes options to filter and customize the data displayed, making it a valuable tool for inventory management and analysis. Users can choose to include the company logo in the report, enhancing its presentation for sharing with stakeholders.
+///</summary>
 
 report 54401 KNHItemLedgerEntryAnalysis
 {
@@ -40,7 +42,7 @@ report 54401 KNHItemLedgerEntryAnalysis
             column(IncludeLogo; gvIncludeLogo)
             {
             }
-            column(CompanyInfo_Picture; CompanyInformation.Picture)
+            column(CompanyInfo_Picture; this.CompanyInformation.Picture)
             {
             }
         }
@@ -64,12 +66,6 @@ report 54401 KNHItemLedgerEntryAnalysis
                 }
             }
         }
-        actions
-        {
-            area(Processing)
-            {
-            }
-        }
     }
     rendering
     {
@@ -89,8 +85,8 @@ report 54401 KNHItemLedgerEntryAnalysis
     trigger OnPreReport()
     begin
         if gvIncludeLogo then begin
-            CompanyInformation.Get();  //Get Company Information record           
-            CompanyInformation.CalcFields(Picture);  //Retrieve company logo
+            this.CompanyInformation.Get();
+            this.CompanyInformation.CalcFields(Picture);
         end;
     end;
 
