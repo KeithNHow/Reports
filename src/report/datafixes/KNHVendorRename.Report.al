@@ -1,3 +1,6 @@
+namespace KNHReports;
+using Microsoft.Purchases.Vendor;
+
 report 54409 "KNH Vendor Rename"
 {
     Caption = 'Rename Vendors';

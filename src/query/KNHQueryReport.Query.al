@@ -1,4 +1,4 @@
-namespace KNHReport;
+namespace KNHReports;
 using Microsoft.Sales.Receivables;
 
 query 54400 "KNH Query Report"

@@ -1,4 +1,4 @@
-namespace KNHReport;
+namespace KNHReports;
 using Microsoft.Purchases.Vendor;
 
 report 54408 "KNH Vendor Lead Time"

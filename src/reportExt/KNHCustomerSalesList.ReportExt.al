@@ -1,6 +1,8 @@
 ///<summary>
 /// The KNHCustomerSalesList report extension enhances the existing "Customer - Top 10 List" report by adding additional fields and functionality. It introduces new columns for the customer's GLN and a custom field called "KNH MyField". Additionally, it calculates the net weight of sales for each customer, with an option to display the weight in pounds. This extension allows users to gain deeper insights into their top customers by providing more detailed information and customizable options on the request page.
 ///</summary>
+namespace KNHReports;
+using Microsoft.Sales.Reports;
 
 reportextension 54400 KNHCustomerSalesList extends "Customer - Top 10 List"
 {

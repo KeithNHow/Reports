@@ -1,3 +1,7 @@
+namespace KNHReports;
+using Microsoft.Sales.Customer;
+using Microsoft.Inventory.Location;
+
 report 54410 "KNH Cust Fill Location 2"
 {
     Caption = 'Customer Fill Location 2';

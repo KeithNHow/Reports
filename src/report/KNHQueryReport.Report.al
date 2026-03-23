@@ -1,3 +1,7 @@
+namespace KNHReports;
+using Microsoft.Sales.Receivables;
+using System.Utilities;
+
 report 54405 "KNH Query Report"
 {
     UsageCategory = ReportsAndAnalysis;

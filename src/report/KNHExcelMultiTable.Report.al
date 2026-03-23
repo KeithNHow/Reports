@@ -1,4 +1,4 @@
-namespace KNHGenDev;
+namespace KNHReports;
 using Microsoft.Sales.Customer;
 using Microsoft.Sales.Receivables;
 

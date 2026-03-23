@@ -3,7 +3,6 @@
 ///</summary>
 
 namespace Reports.Reports;
-
 using Microsoft.Purchases.Vendor;
 
 tableextension 54401 KNHVendor extends Vendor

@@ -2,6 +2,10 @@
 /// The KNHCustomerExcel report is designed to provide a detailed layout of customer information in Excel format. It includes various customer details such as name, address, city, phone number, and financial information. The report also includes related customer ledger entries, allowing for a comprehensive view of customer transactions. This report is ideal for users who need to analyze customer data in Excel or share it with stakeholders who prefer Excel format.
 ///</summary>
 
+namespace KNHReports;
+using Microsoft.Sales.Customer;
+using Microsoft.Sales.Receivables;
+
 report 54400 KNHCustomerExcel
 {
     ApplicationArea = Basic, Suite;

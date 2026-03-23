@@ -1,6 +1,10 @@
 ///<summary>
 /// The KNHVendorExcel report is designed to provide a detailed layout of vendor information in Excel format. It includes various vendor details such as name and number, as well as related vendor ledger entries with document numbers, types, amounts, posting dates, and dimensions. The report is ideal for users who need to analyze vendor data in Excel or share it with stakeholders who prefer Excel format.
 ///</summary>
+namespace KNHReports;
+using Microsoft.Purchases.Vendor;
+using Microsoft.Purchases.Payables;
+using Microsoft.Finance.Dimension;
 
 report 54403 KNHVendorExcel
 {
