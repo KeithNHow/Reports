@@ -37,7 +37,7 @@
     "workbench.editor.enablePreview": true,
 
     "CRS.ObjectNamePrefix": "KNH",
-    "CRS.OnSaveAlFileAction": "Rename",
+    //"CRS.OnSaveAlFileAction": "Rename",
     "CRS.FileNamePattern": "<ObjectName>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternExtensions": "<ObjectName>.<ObjectTypeShortPascalCase>.al",
     "CRS.FileNamePatternPageCustomizations": "<ObjectName>.<ObjectTypeShortPascalCase>.al",
