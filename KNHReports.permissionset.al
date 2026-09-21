@@ -1,3 +1,5 @@
+namespace KNHReports;
+
 permissionset 54400 KNHReports
 {
     Assignable = true;

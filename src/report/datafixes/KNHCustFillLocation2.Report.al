@@ -1,6 +1,6 @@
 namespace KNHReports;
-using Microsoft.Sales.Customer;
 using Microsoft.Inventory.Location;
+using Microsoft.Sales.Customer;
 
 report 54410 "KNH Cust Fill Location 2"
 {

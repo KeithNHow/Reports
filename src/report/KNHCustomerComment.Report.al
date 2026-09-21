@@ -1,6 +1,6 @@
 namespace KNHReports;
-using Microsoft.Sales.Customer;
 using Microsoft.Foundation.Comment;
+using Microsoft.Sales.Customer;
 
 report 54407 "KNH Customer Comment"
 {
