@@ -1,4 +1,7 @@
 //60059 KNH 30/08/2023
+namespace KNHReports;
+using Microsoft.Finance.GeneralLedger.Setup;
+
 pageextension 54400 "KNH General Ledger Setup" extends "General Ledger Setup"
 {
     actions

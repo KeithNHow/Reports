@@ -1,3 +1,21 @@
+namespace KNHReports;
+using Microsoft.CRM.Contact;
+using Microsoft.CRM.Setup;
+using Microsoft.Foundation.Company;
+using Microsoft.Foundation.NoSeries;
+using Microsoft.Foundation.Reporting;
+using Microsoft.Inventory.Item;
+using Microsoft.Inventory.Item.Catalog;
+using Microsoft.Inventory.Ledger;
+using Microsoft.Purchases.Document;
+using Microsoft.Purchases.Vendor;
+using Microsoft.Sales.Customer;
+using Microsoft.sales.Document;
+using Microsoft.Sales.History;
+using Microsoft.Warehouse.Ledger;
+using Microsoft.Warehouse.Structure;
+using System.Environment;
+
 codeunit 54411 "KNH Data Updates"
 {
     trigger OnRun()
